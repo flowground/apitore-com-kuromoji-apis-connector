@@ -1,0 +1,15 @@
+{
+    "name": "apitore-com-kuromoji-apis-connector",
+    "version": "1.0.1",
+    "description": "Kuromoji: japanese morphological analyzer.<BR />[Endpoint] https://api.apitore.com/api/7",
+    "main": "component.json",
+    "dependencies": {
+        "elasticio-node": "0.0.9",
+        "elasticio-sailor-nodejs": "^2.2.1",
+        "swagger-client": "^3.8.22"
+    },
+    "author": {
+        "name": "Deutsche Telekom AG"
+    },
+    "license": "Apache-2.0"
+}

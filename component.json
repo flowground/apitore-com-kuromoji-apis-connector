@@ -1,0 +1,102 @@
+{
+    "title": "Kuromoji APIs",
+    "description": "Kuromoji: japanese morphological analyzer.<BR />[Endpoint] https://api.apitore.com/api/7",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/apitore.com/kuromojiApis/1.0.1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.apitore.com/api/7",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "tokenizeUsingGET_1": {
+            "main": "./lib/actions/tokenizeUsingGET_1.js",
+            "title": "Kuromoji IPADIC NEologd",
+            "description": "Kuromoji IPADIC NEologd dictionary.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/kuromoji-response\">kuromoji-response</a><BR />&nbsp; Class: com.apitore.banana.response.com.atilika.kuromoji.TokenResponseEntity<BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/tokenizeUsingGET_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "tokenizeUsingPOST_1": {
+            "main": "./lib/actions/tokenizeUsingPOST_1.js",
+            "title": "Kuromoji IPADIC NEologd",
+            "description": "Kuromoji IPADIC NEologd dictionary.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/kuromoji-response\">kuromoji-response</a><BR />&nbsp; Class: com.apitore.banana.response.com.atilika.kuromoji.TokenResponseEntity<BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/tokenizeUsingPOST_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "tokenizeUsingGET": {
+            "main": "./lib/actions/tokenizeUsingGET.js",
+            "title": "Kuromoji IPADIC",
+            "description": "Kuromoji IPADIC dictionary.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/kuromoji-response\">kuromoji-response</a><BR />&nbsp; Class: com.apitore.banana.response.com.atilika.kuromoji.TokenResponseEntity<BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/tokenizeUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "tokenizeUsingPOST": {
+            "main": "./lib/actions/tokenizeUsingPOST.js",
+            "title": "Kuromoji IPADIC",
+            "description": "Kuromoji IPADIC dictionary.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/kuromoji-response\">kuromoji-response</a><BR />&nbsp; Class: com.apitore.banana.response.com.atilika.kuromoji.TokenResponseEntity<BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/tokenizeUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
